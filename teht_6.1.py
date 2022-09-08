@@ -1,9 +1,11 @@
 import random
-
-min, max = 1, 6
+def di():
+    dice = random.randint(1,6)
+    return dice
 
 while True:
-    r = random.randint(min, max)
-    print(r)
-    if r == 6:
+    dice = di()
+    print(dice)
+    if dice == 6:
         break
+
