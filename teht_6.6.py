@@ -9,15 +9,16 @@ def PizzanArvo(halkaisijaCm, hinta):
 
 pizzat = []
 
-for x in range(2):
-    print(f"Anna pizza {x} tiedot: ")
+lmk = int(input("Monta pizzaa? "))
+for x in range(lmk):
+    print(f"Anna pizza {x+1}. pizzan tiedot: ")
     hinta = float(input("Syötä pizzan hinta: "))
     halkisija = float(input("Syötä pizzan halkisija: "))
     pizzat.append(PizzanArvo(halkisija, hinta))
 
 arvokkaimmanId = 0
 for x in range(2):
-    if pizzat[arvokkaimmanId] < pizzat[x]:
+    if pizzat[arvokkaimmanId] > pizzat[x]:
         arvokkaimmanId = x
 
-print(f"Arokkain pizza on indeksin {arvokkaimmanId} pizza.")
+print(f"Arokkain (paras hinta-kokosuhde) pizza on {arvokkaimmanId+1}. pizza.")
